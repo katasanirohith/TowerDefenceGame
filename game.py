@@ -6,9 +6,9 @@ import time as Time
 # pygame.init()
 # pygame.mixer.pre_init(44100, 16, 2, 4096)
 # pygame.mixer.init()
-mixer.init()
-avengers = mixer.Sound("C:\\Users\\Rohith Reddy\\Documents\\pygame towet\\tower-defence\\music\\a.wav")
-mixer.Sound.play(avengers)
+# mixer.init()
+# avengers = mixer.Sound("C:\\Users\\Rohith Reddy\\Documents\\pygame towet\\tower-defence\\music\\a.wav")
+# mixer.Sound.play(avengers)
 
 
 def run(level, max_levels, window_size, old_window, y_change=-1):
@@ -107,7 +107,7 @@ def run(level, max_levels, window_size, old_window, y_change=-1):
         p = gfunc.get_key_states()[K_p]
 
         if p:
-            mixer.Sound.play(avengers)
+           # mixer.Sound.play(avengers)
             surf_size = game_size[1] + message_height * game_scale
             surf = Surface((game_size[0], surf_size))
 
@@ -122,8 +122,8 @@ def run(level, max_levels, window_size, old_window, y_change=-1):
                 window.blit(game_window, (offset[0], offset[1]))
                 window.blit(message_surf, (offset[0], offset[1] - game_scale))
                 return 'quit', Surface(window_size)
-            if value == 'resume':
-                mixer.Sound.stop(avengers)
+            # if value == 'resume':
+            #     mixer.Sound.stop(avengers)
 
             return 'done', window_size
 
@@ -248,11 +248,11 @@ def run(level, max_levels, window_size, old_window, y_change=-1):
 
                 restart = False
                 tower_handler.reset()
-                mixer.Sound.stop(avengers)
+               # mixer.Sound.stop(avengers)
 
                 offset, window, window_size, game_window, game_size, game_scale = resize(window_size, main_window, game_window, game_size)
                 if restart:
-                    mixer.Sound.play(avengers)
+                  #  mixer.Sound.play(avengers)
                 while not restart:
 
                     # Must be at start

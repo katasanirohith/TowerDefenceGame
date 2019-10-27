@@ -30,12 +30,10 @@ class Bullet:
         self.pos[0] += dt * self.speed * self.slope[0]
         self.pos[1] += dt * self.speed * self.slope[1]
 
-
     def get_angle(self):
         p1 = self.pos
         p2 = self.pos[0] + self.slope[0], self.pos[1] + self.slope[1]
         return gfunc.get_rot(p1, p2)
-
 
     def on_screen(self, window_scale, game_grid):
 
